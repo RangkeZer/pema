@@ -22,6 +22,10 @@ if (isset($_GET['url']))
         include 'lihat_petugas.php';
         break;
 
+        case 'tambah_petugas';
+        include 'tambah_petugas.php';
+        break;
+
     }
 }
 else
@@ -46,7 +50,7 @@ if($check = mysqli_num_rows($sql))
                   <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Laporan Pengaduan :
                     
                   </div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">Ada <?php echo $check; ?> Laporan dari masyarakat</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">Ada <?php echo $check; ?> Laporan belum ditanggapi</div>
                 </div>
                 <div class="col-auto">
                   <i class="fas fa-comments fa-4x text-gray-300"></i>

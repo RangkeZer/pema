@@ -58,11 +58,6 @@
             <img src="foto/<?php echo $data['foto']; ?>" width=500>
             </div>
         </div>
-
-        <div class="form-group col-sm-6">
-          <input type="submit" value="Simpan" class="btn btn-primary">
-          <input type="reset" value="Kosongkan" class="btn btn-warning">
-        </div>
     </form>
 
     <?php } ?>

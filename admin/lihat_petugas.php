@@ -32,6 +32,14 @@
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Data Petugas</h6>
             </div>
+
+            <a href="admin.php?url=tambah_petugas" class="btn btn-primary btn-icon-split">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <span class="text">Tambah Petugas</span>
+                  </a> 
+
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -61,17 +69,12 @@
                       <td><?php echo $data['level']; ?></td>
                       <td>
                         <!--Button-->
-                        <a href="?url=detail_pengaduan&id=<?php echo $data['id_petugas'];?>" class="btn btn-info btn-icon-split">
-                        <span class="icon text-white-50">
-                          <i class="fas fa-info"></i>
-                          <span class="text">Detail</span>
-                        </span>
-                          <a href="?url=tanggapan&id=<?php echo $data['id_petugas'];?>" class="btn btn-success btn-icon-split">
-                        <span class="icon text-white-50">
-                          <i class="fas fa-check"></i>
-                          <span class="text">Tanggapi</span>
-                        </span>
-                  </a>
+                        <a href="#" class="btn btn-facebook btn-circle">
+                          <i class="fa fa-edit"></i>
+                        </a>
+                        <a href="#" class="btn btn-danger btn-circle">
+                          <i class="fa fa-trash"></i>
+                        </a>
                           
                     </td>
                     </tr>
