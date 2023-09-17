@@ -69,10 +69,10 @@
                       <td><?php echo $data['level']; ?></td>
                       <td>
                         <!--Button-->
-                        <a href="#" class="btn btn-facebook btn-circle">
+                        <a href="admin.php?url=edit_petugas&id=<?php echo $data['id_petugas']; ?>" class="btn btn-facebook btn-circle">
                           <i class="fa fa-edit"></i>
                         </a>
-                        <a href="#" class="btn btn-danger btn-circle">
+                        <a href="admin.php?url=" class="btn btn-danger btn-circle">
                           <i class="fa fa-trash"></i>
                         </a>
                           

@@ -26,6 +26,10 @@ if (isset($_GET['url']))
         include 'tambah_petugas.php';
         break;
 
+        case 'edit_petugas';
+        include 'edit_petugas.php';
+        break;
+
     }
 }
 else

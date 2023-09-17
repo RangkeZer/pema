@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Tambah Petugas</title>
+  <title>Informasi Petugas</title>
 
   <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -23,40 +23,53 @@
 
 <div class="card shadow">
     <div class="card-header">
-        Tambah Petugas
+        Edit Informasi 
     </div>
 <div class="card-body">
-    <form action="simpan_petugas.php" method="post" class="form-horizontal" enctype="multipart/form-data" >
+
+<?php 
+require "../connect.php";
+$sql = mysqli_query($conn, "SELECT * FROM petugas where id_petugas='$_GET[id]' ");
+if($data = mysqli_fetch_array($sql))
+{
+?>
+
+    <form action="update_petugas.php" method="post" class="form-horizontal" enctype="multipart/form-data" >
+        <div class="form-group cols-sm-6">
+            <label>ID Petugas</label>
+            <input type="text" name="id_petugas" value="<?php echo $data['id_petugas']; ?>" class="form-control" readonly >
+        </div>
         <div class="form-group cols-sm-6">
             <label>Nama Petugas</label>
-            <input type="text" name="nama_petugas" value="" class="form-control" >
+            <input type="text" name="nama_petugas" value="<?php echo $data['nama_petugas']; ?>" class="form-control" >
         </div>
         <div class="form-group cols-sm-6">
             <label>Username</label>
-            <input type="text" name="username" value="" class="form-control" >
+            <input type="text" name="username" value="<?php echo $data['username']; ?>" class="form-control" >
         </div>
         <div class="form-group cols-sm-6">
             <label>Password</label>
-            <input type="text" name="password" value="" class="form-control" >
+            <input type="text" name="password" value="<?php echo $data['password']; ?>" class="form-control" >
         </div>
         <div class="form-group cols-sm-6">
             <label>telp</label>
-            <input type="text" name="telp" value="" class="form-control" >
+            <input type="text" name="telp" value="<?php echo $data['telp']; ?>" class="form-control" >
         </div>
         <div class="form-group cols-sm-6">
             <label>Level</label>
             <select class="form-control" name="level">
-            <option>==pilih==</option>
+            <option value="<?php echo $data['level']; ?>"><?php echo $data['level']; ?></option>
             <option value="admin" >Admin</option>
             <option value="petugas" >Petugas</option>
             </select>
         </div>
         
         <div class="form-group col-sm-6">
-          <input type="submit" value="Simpan" class="btn btn-primary">
+          <input type="submit" value="Edit Data" class="btn btn-primary">
           <input type="reset" value="Kosongkan" class="btn btn-warning">
         </div>
     </form>
+    <?php } ?>
 
 <!-- Bootstrap core JavaScript-->
 <script src="../vendor/jquery/jquery.min.js"></script>
