@@ -29,7 +29,6 @@ if (isset($_GET['url']))
         case 'edit_petugas';
         include 'edit_petugas.php';
         break;
-
     }
 }
 else
