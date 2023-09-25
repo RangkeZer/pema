@@ -29,6 +29,14 @@ if (isset($_GET['url']))
         case 'edit_petugas';
         include 'edit_petugas.php';
         break;
+
+        case 'preview_petugas';
+        include 'preview_petugas.php';
+        break;
+
+        case 'view_laporan';
+        include 'view_laporan.php';
+        break;
     }
 }
 else

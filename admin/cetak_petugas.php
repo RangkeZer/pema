@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,10 +36,12 @@
             <div class="card-header py-3">
                 </div>
                 
-                
-                
                 <div class="card-body">
-                    <h6 class="m-0 font-weight-bold text-primary">Data Petugas</h6>
+                
+                <h3 class="m-0 font-weight-bold text-primary" align="center">Aplikasi Pengaduan Masyarakat</h3>
+                <br> <br>
+                
+                    <h6 class="m-0 font-weight-bold text-primary" align="center">Laporan Petugas</h6>
                     <br><br>            
 
                     <div class="table-responsive">
@@ -48,7 +54,6 @@
                       <th>Password</th>
                       <th>telp</th>
                       <th>Level</th>
-                      <th>Aksi</th> 
                     </tr>
                   </thead>
                   <?php 
@@ -64,23 +69,21 @@
                       <td><?php echo $data['password']; ?></td>
                       <td><?php echo $data['telp']; ?></td>
                       <td><?php echo $data['level']; ?></td>
-                      <td>
-                        <!--Button-->
-                        <a href="admin.php?url=edit_petugas&id=<?php echo $data['id_petugas']; ?>" class="btn btn-facebook btn-circle">
-                          <i class="fa fa-edit"></i>
-                        </a>
-                        <a href="hapus_petugas.php?id=<?php echo $data['id_petugas']; ?>" class="btn btn-danger btn-circle" 
-                        onclick="return confirm('Yakin akan menghapus data?')">
-                          <i class="fa fa-trash"></i>
-                        </a>
-                          
-                    </td>
+                      
                     </tr>
                     
                   </tbody>
                   <?php } ?>
                 </table>
+                <br>
+
               </div>
+                <h6 class="m-0 font-weight-bold text-secondary" align="right">Magelang, <?php echo 
+                date('d m Y'); ?></h6>
+                <br><br>
+                <h6 class="m-0 font-bold text-secondary" align="right">Petugas, </h6>
+                <h6 class="m-0 font-weight-bold text-primary" align="right"><?php echo 
+                $_SESSION ['nama']; ?></h6>
             </div>
           </div>
 

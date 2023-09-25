@@ -96,8 +96,8 @@ if($_SESSION['level']!="admin")
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Menu Laporan:</h6>
-                <a class="collapse-item" href="">Laporan Petugas</a>
-                <a class="collapse-item" href="">Laporan Masyarakat</a>
+                <a class="collapse-item" href="?url=preview_petugas">Laporan Petugas</a>
+                <a class="collapse-item" href="?url=view_laporan">Laporan Masyarakat</a>
                 <a class="collapse-item" href="">Laporan Laporan</a>
                 <a class="collapse-item" href="">Laporan Tanggapan</a>
               </div>
